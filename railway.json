@@ -5,7 +5,7 @@
     "dockerfilePath": "Dockerfile"
   },
   "deploy": {
-    "startCommand": "/bin/sh -c \"exec python -m solara run app.py --host 0.0.0.0 --port ${PORT:-8765}\"",
+    "startCommand": "python -m solara run app.py --host 0.0.0.0 --port 8080",
     "healthcheckPath": "/",
     "healthcheckTimeout": 300
   }

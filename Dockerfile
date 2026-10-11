@@ -10,5 +10,5 @@ RUN python -m pip install --no-cache-dir -r requirements.txt
 
 COPY cursed_temple_game/ ./
 
-EXPOSE 8765
-CMD ["sh", "-c", "exec python -m solara run app.py --host 0.0.0.0 --port ${PORT:-8765}"]
+EXPOSE 8080
+CMD ["python", "-m", "solara", "run", "app.py", "--host", "0.0.0.0", "--port", "8080"]
